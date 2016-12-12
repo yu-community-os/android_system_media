@@ -336,7 +336,8 @@ typedef enum {
     AUDIO_FORMAT_APTX                = 0x21000000UL,
     AUDIO_FORMAT_APTX_HD             = 0x22000000UL,
 
-    AUDIO_FORMAT_MAIN_MASK           = 0xFF000000UL,/* Deprecated. Use audio_get_main_format() */
+    AUDIO_FORMAT_DOLBY_TRUEHD        = 0x0E000000UL,
+    AUDIO_FORMAT_MAIN_MASK           = 0xFF000000UL, /* Deprecated. Use audio_get_main_format() */
     AUDIO_FORMAT_SUB_MASK            = 0x00FFFFFFUL,
 
     /* Aliases */
@@ -1586,6 +1587,7 @@ static inline bool audio_is_valid_format(audio_format_t format)
                 format != AUDIO_FORMAT_PCM_24_BIT_OFFLOAD) {
             return false;
         }
+    case AUDIO_FORMAT_DOLBY_TRUEHD:
         return true;
     default:
         return false;
