@@ -1170,7 +1170,7 @@ struct audio_port_config {
 
 
 /* max number of sampling rates in audio port */
-#define AUDIO_PORT_MAX_SAMPLING_RATES 16
+#define AUDIO_PORT_MAX_SAMPLING_RATES 20
 /* max number of channel masks in audio port */
 #define AUDIO_PORT_MAX_CHANNEL_MASKS 16
 /* max number of audio formats in audio port */
